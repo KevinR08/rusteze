@@ -52,10 +52,6 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - name: Read and extract Azure credentials from environment file
-        env:
-          AZURE_PUBLISH_PROFILE: ${{ secrets.AZURE_PUBLISH_PROFILE }}
-        run: echo "${{ secrets.AZURE_PUBLISH_PROFILE }}" > publishSettings.publishsettings
 
         
             
@@ -76,5 +72,5 @@ jobs:
         with:
           app-name: 'rusteze'
           slot-name: 'Production'
-          publish-profile: ./publishSettings.publishsettings
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: .
