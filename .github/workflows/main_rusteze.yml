@@ -72,5 +72,5 @@ jobs:
         with:
           app-name: 'rusteze'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5C510234931B40CF8EB16CE6144EA8A8 }}
           package: .
