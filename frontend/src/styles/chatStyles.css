@@ -1,0 +1,92 @@
+#chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    justify-content: space-between;
+    list-style-type: none;
+  padding: 0;
+  }
+  
+  #messages {
+    list-style-type: none;
+    padding: 0;
+    width: 40%;
+  }
+  
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    border-radius: 8px;
+  }
+  
+  /* Estilos para los mensajes del usuario */
+  li.user-message {
+    align-self: flex-end;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Estilos para los mensajes del otro usuario */
+  li.other-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  form {
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .inp[type="text"] {
+    flex: 1;
+    padding: 10px;
+    margin: 0 0 2% 25%;
+    font-size: 16px;
+  }
+  
+  .but[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 25% 2% 0;
+  }
+  
+  .other-message {
+    text-align: right; /* Alinea los mensajes del otro usuario a la derecha */
+  }
+  
+  .user-message {
+    text-align: left; /* Alinea los mensajes del usuario a la izquierda */
+  }
+
+  #messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .other-message {
+    align-self: flex-start;
+    background-color: #f1f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 80%;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 80%;
+  }

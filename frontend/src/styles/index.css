@@ -1,0 +1,86 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  */
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  
+}
+
+a {
+  color: #106eea;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3b8af2;
+  text-decoration: none;
+}
+
+.cardVideo{
+  text-align: center;
+
+  display:flex;
+  padding:30px 350px 0px 350px;
+  margin:0px;
+
+}
+
+.video{
+  flex:1;
+  width: 40%; height: auto; margin: 0 30px;
+}
+
+.descripcion{
+  flex:2;
+  margin: 0 30px;
+  width: 70%;
+  text-align: justify;
+}
+
+.descripcion h4{
+  font-family: Open Sans,  Helvetica Neue;
+  text-decoration: none;
+  color:#6c757d
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 1500px) {
+  .cardVideo {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Reducir el padding en pantallas más pequeñas */
+  }
+
+  .video {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .descripcion {
+    width: 100%;
+    text-align: justify;
+    margin: 0;
+  }
+}
+
