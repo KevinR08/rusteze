@@ -51,6 +51,13 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
+
+      - name: Read and extract Azure credentials
+        run: |
+          echo "::set-env name=AZURE_PUBLISH_PROFILE::$(curl -s https://raw.githubusercontent.com/KevinR08/rusteze/main/profile.publishsettings)"
+          shell: bash
+
+        
             
       - name: Install Backend Dependencies and Start Server
         working-directory: ./backend/api
@@ -69,5 +76,5 @@ jobs:
         with:
           app-name: 'rusteze'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0FAB7353142F474F91427F219CC7D247 }}
+          publish-profile: ${{ env.AZURE_PUBLISH_PROFILE }}
           package: .
