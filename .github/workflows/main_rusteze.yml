@@ -51,7 +51,18 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      
+        
+      - name: Install Backend Dependencies and Start Server
+        working-directory: ./backend/api
+        run: |
+                npm install
+                node index.js
+
+      - name: Install Frontend Dependencies and Start Development Server
+        working-directory: ./frontend
+        run: |
+              npm install
+               npm run dev
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
